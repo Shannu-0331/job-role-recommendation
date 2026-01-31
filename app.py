@@ -122,7 +122,7 @@ st.sidebar.header(" User Input")
 
 user_input = st.sidebar.text_area(
     "Enter your skills (comma separated)",
-    placeholder="python, sql, pandas, machine learning"
+    placeholder="Ex: python, sql, pandas, machine learning"
 )
 
 predict_btn = st.sidebar.button("Predict Job Role")
@@ -154,3 +154,4 @@ else:
 # -------------------------------------------------
 st.divider()
 st.caption("Built using Machine Learning (Linear SVM) and Streamlit")
+
