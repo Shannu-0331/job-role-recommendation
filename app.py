@@ -12,14 +12,13 @@ from sklearn.svm import LinearSVC
 # -------------------------------------------------
 st.set_page_config(
     page_title="Job Recommendation System",
-    page_icon="💼",
     layout="wide"
 )
 
 # -------------------------------------------------
 # TITLE
 # -------------------------------------------------
-st.title("💼 Job Role & Skill Recommendation System")
+st.title(" Job Role & Skill Recommendation System")
 st.caption("Predict a suitable job role and get recommended skills based on your input.")
 
 st.divider()
@@ -119,7 +118,7 @@ def predict_and_recommend(user_input, top_n=6):
 # -------------------------------------------------
 # SIDEBAR INPUT (CLEAN LOOK)
 # -------------------------------------------------
-st.sidebar.header("🔹 User Input")
+st.sidebar.header(" User Input")
 
 user_input = st.sidebar.text_area(
     "Enter your skills (comma separated)",
@@ -137,10 +136,10 @@ if predict_btn:
     else:
         role, skills = predict_and_recommend(user_input)
 
-        st.subheader("🎯 Predicted Job Role")
+        st.subheader(" Predicted Job Role")
         st.success(role.upper())
 
-        st.subheader("📌 Recommended Skills")
+        st.subheader("Recommended Skills")
         if skills:
             for skill in skills:
                 st.markdown(f"- **{skill}**")
@@ -148,7 +147,7 @@ if predict_btn:
             st.info("You already have most of the required skills!")
 
 else:
-    st.info("⬅️ Enter your skills from the sidebar to get started.")
+    st.info(" Enter your skills from the sidebar to get started.")
 
 # -------------------------------------------------
 # FOOTER
